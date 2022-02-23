@@ -6,7 +6,7 @@ const StoreContext = createContext(null);
 
 export const StoreProvider: FC<{
   children?: ReactNode;
-  store: any;
+  store: object;
 }> = ({ children, store }) => {
   return (
     <StoreContext.Provider value={store}>{children}</StoreContext.Provider>

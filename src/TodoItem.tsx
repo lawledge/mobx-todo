@@ -14,7 +14,6 @@ export const TodoItem = observer(() => {
     root: {
       display: "flex",
       justifyContent: "space-between",
-      width: "800px",
     },
   };
 

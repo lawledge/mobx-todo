@@ -11,8 +11,10 @@ const store = new TodoStore();
 const App = observer(() => {
   return (
     <StoreProvider store={store}>
-      <h2>TodoList</h2>
-      <TodoItem />
+      <div style={{ width: "800px", textAlign: "center" }}>
+        <h2 className="animate-character">TodoList</h2>
+        <TodoItem />
+      </div>
     </StoreProvider>
   );
 });
