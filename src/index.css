@@ -29,7 +29,7 @@ code {
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  animation: textclip 5s linear infinite;
   display: inline-block;
   font-size: 50px;
 }
@@ -37,5 +37,63 @@ code {
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.add {
+  height: 37px;
+  width: 37px;
+  border-color: #fff;
+  color: #fff;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1s linear infinite;
+  display: inline-block;
+}
+
+.add-item {
+  display: flex;
+  align-items: center;
+}
+
+.add-item input {
+  height: 30px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

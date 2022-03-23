@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import { TodosInterface } from "./store/TodoStore";
 import { useRootStore } from "./store/RootStore";
 
-export const TodoItem = observer(() => {
+export const TodoItemList = observer(() => {
   const todoStore = useRootStore();
 
   useEffect(() => {
@@ -14,6 +14,7 @@ export const TodoItem = observer(() => {
     root: {
       display: "flex",
       justifyContent: "space-between",
+      margin: "4px 0",
     },
   };
 

@@ -1,19 +1,30 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
+
 import { observer } from "mobx-react-lite";
 
-import { TodoItem } from "./TodoItem";
+import { TodoItemList } from "./TodoItemList";
 import TodoStore from "./store/TodoStore";
 import { StoreProvider } from "./store/RootStore";
+import { AddItem } from "./components/AddItem";
 
 const store = new TodoStore();
 
 const App = observer(() => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = ({ target: { value } }) => {
+    setInputValue(value);
+  };
+
   return (
     <StoreProvider store={store}>
-      <div style={{ width: "800px", textAlign: "center" }}>
+      <div className="main">
         <h2 className="animate-character">TodoList</h2>
-        <TodoItem />
+        <AddItem
+          handleInputChange={handleInputChange}
+          inputValue={inputValue}
+        />
+        <TodoItemList />
       </div>
     </StoreProvider>
   );
