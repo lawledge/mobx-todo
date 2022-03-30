@@ -1,28 +1,6 @@
 import React from "react";
-import { useRootStore } from "../store/RootStore";
 
-export const AddItem = ({ handleInputChange, inputValue }) => {
-  const todoStore = useRootStore();
-
-  class todoItemModel {
-    title: any;
-    id: number;
-    userId: number;
-    completed: boolean;
-
-    constructor() {
-      this.title = inputValue;
-      this.id = Math.random();
-      this.userId = Math.random();
-      this.completed = false;
-    }
-  }
-
-  const addTodoToStore = () => {
-    const newTodoElement = new todoItemModel();
-    todoStore.addTodo(newTodoElement);
-  };
-
+export const AddItem = ({ handleInputChange, inputValue, addTodoToStore }) => {
   return (
     <div className="add-item">
       <input

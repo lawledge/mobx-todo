@@ -16,6 +16,27 @@ const App = observer(() => {
     setInputValue(value);
   };
 
+  class TodoItemModel {
+    title: string;
+    id: number;
+    userId: number;
+    completed: boolean;
+
+    constructor() {
+      this.title = inputValue;
+      this.id = Math.random();
+      this.userId = Math.random();
+      this.completed = false;
+    }
+  }
+
+  const addTodoToStore = () => {
+    const newTodoElement = new TodoItemModel();
+
+    store.addTodo(newTodoElement);
+    setInputValue("");
+  };
+
   return (
     <StoreProvider store={store}>
       <div className="main">
@@ -23,6 +44,7 @@ const App = observer(() => {
         <AddItem
           handleInputChange={handleInputChange}
           inputValue={inputValue}
+          addTodoToStore={addTodoToStore}
         />
         <TodoItemList />
       </div>
