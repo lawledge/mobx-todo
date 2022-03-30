@@ -26,12 +26,12 @@ export const AddItem = ({ handleInputChange, inputValue }) => {
   return (
     <div className="add-item">
       <input
-        placeholder="vvodi suka"
+        placeholder="Enter something pls"
         onChange={handleInputChange}
         value={inputValue}
       />
 
-      <button className="add" onClick={addTodoToStore}>
+      <button className="add" onClick={addTodoToStore} disabled={!inputValue}>
         Add
       </button>
     </div>

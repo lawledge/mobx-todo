@@ -10,18 +10,10 @@ export const TodoItemList = observer(() => {
     todoStore.fetchTodo();
   }, [todoStore]);
 
-  const styles = {
-    root: {
-      display: "flex",
-      justifyContent: "space-between",
-      margin: "4px 0",
-    },
-  };
-
   return (
     <div>
       {todoStore.todos.map(({ id, title, completed }: TodosInterface) => (
-        <div key={id} style={styles.root}>
+        <div key={id} className="wrap-item">
           <input
             type="checkbox"
             checked={completed}
