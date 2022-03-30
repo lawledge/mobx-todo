@@ -4,6 +4,7 @@ export interface TodosInterface {
   id: number;
   title: string;
   completed: boolean;
+  userId: number;
 }
 
 class TodoStore {
@@ -13,8 +14,8 @@ class TodoStore {
     makeAutoObservable(this);
   }
 
-  addTodo(todo: any) {
-    this.todos.push(todo);
+  addTodo(todo: TodosInterface) {
+    this.todos.unshift(todo);
   }
 
   removeTodo(id: number) {

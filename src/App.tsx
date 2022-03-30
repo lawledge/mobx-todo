@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { observer } from "mobx-react-lite";
 
-import { TodoItemList } from "./TodoItemList";
+import { TodoItemList } from "./components/TodoItemList";
 import TodoStore from "./store/TodoStore";
 import { StoreProvider } from "./store/RootStore";
 import { AddItem } from "./components/AddItem";

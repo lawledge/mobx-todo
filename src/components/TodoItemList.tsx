@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import { TodosInterface } from "./store/TodoStore";
-import { useRootStore } from "./store/RootStore";
+import { TodosInterface } from "../store/TodoStore";
+import { useRootStore } from "../store/RootStore";
 
 export const TodoItemList = observer(() => {
   const todoStore = useRootStore();
